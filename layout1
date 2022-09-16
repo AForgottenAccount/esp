@@ -1,94 +1,191 @@
 local args = {
-    [1] = "Laser Sight",
-    [2] = CFrame.new(243.29998779296875, 1435.8994140625, 466.29998779296875) * CFrame.Angles(-3.1415927410125732, -8.742277657347586e-08, -3.1415927410125732)
+    [1] = "Load",
+    [2] = "Layout2"
 }
-game:GetService("ReplicatedStorage").PlaceItem:InvokeServer(unpack(args))
-
+game:GetService("ReplicatedStorage").Layouts:InvokeServer(unpack(args))
+wait(20)
 local args = {
-    [1] = "Red Teleporter Sender",
-    [2] = CFrame.new(252.29998779296875, 1436.8994140625, 466.29998779296875) * CFrame.Angles(-0, 1.7484555314695172e-07, -0)
-}
-game:GetService("ReplicatedStorage").PlaceItem:InvokeServer(unpack(args))
-local args = {
-    [1] = "Red Teleporter Receiver",
-    [2] = CFrame.new(327.29998779296875, 1437.8994140625, 561.2999877929688) * CFrame.Angles(-3.1415927410125732, -8.742277657347586e-08, -3.1415927410125732)
-}
-game:GetService("ReplicatedStorage").PlaceItem:InvokeServer(unpack(args))
-local args = {
-    [1] = "Le Banana",
-    [2] = CFrame.new(327.29998779296875, 1437.8994140625, 554.2999877929688) * CFrame.Angles(-3.1415927410125732, -2.384976127700611e-08, -3.1415927410125732)
-}
-game:GetService("ReplicatedStorage").PlaceItem:InvokeServer(unpack(args))
-local args = {
-    [1] = "Mechanized Nature",
-    [2] = CFrame.new(327.29998779296875, 1437.8994140625, 546.2999877929688) * CFrame.Angles(-3.1415927410125732, -8.742277657347586e-08, -3.1415927410125732)
-}
-game:GetService("ReplicatedStorage").PlaceItem:InvokeServer(unpack(args))
-local args = {
-    [1] = "Lush Forest",
-    [2] = CFrame.new(327.29998779296875, 1438.8994140625, 538.2999877929688) * CFrame.Angles(-3.1415927410125732, -2.384976127700611e-08, -3.1415927410125732)
-}
-game:GetService("ReplicatedStorage").PlaceItem:InvokeServer(unpack(args))
-local args = {
-    [1] = "Verdantized Splasher",
-    [2] = CFrame.new(327.29998779296875, 1443.8994140625, 529.2999877929688) * CFrame.Angles(-0, 1.7484555314695172e-07, -0)
-}
-game:GetService("ReplicatedStorage").PlaceItem:InvokeServer(unpack(args))
-local args = {
-    [1] = "Sutekh's Palace",
-    [2] = CFrame.new(327.29998779296875, 1440.8994140625, 520.2999877929688) * CFrame.Angles(-3.1415927410125732, -2.384976127700611e-08, -3.1415927410125732)
-}
-game:GetService("ReplicatedStorage").PlaceItem:InvokeServer(unpack(args))
-local args = {
-    [1] = "King Midas' Touch",
-    [2] = CFrame.new(327.29998779296875, 1437.8994140625, 511.29998779296875) * CFrame.Angles(-3.1415927410125732, -8.742277657347586e-08, -3.1415927410125732)
-}
-game:GetService("ReplicatedStorage").PlaceItem:InvokeServer(unpack(args))
-local args = {
-    [1] = "Heavenly Enchancer",
-    [2] = CFrame.new(327.29998779296875, 1441.8994140625, 501.29998779296875) * CFrame.Angles(-3.1415927410125732, -8.742277657347586e-08, -3.1415927410125732)
-}
-game:GetService("ReplicatedStorage").PlaceItem:InvokeServer(unpack(args))
-local args = {
-    [1] = "Premium Refiner",
-    [2] = CFrame.new(327.29998779296875, 1437.8994140625, 494.29998779296875) * CFrame.Angles(-3.1415927410125732, -8.742277657347586e-08, -3.1415927410125732)
-}
-game:GetService("ReplicatedStorage").PlaceItem:InvokeServer(unpack(args))
-
-local args = {
-    [1] = "Blessing Village",
-    [2] = CFrame.new(327.29998779296875, 1438.8994140625, 488.29998779296875) * CFrame.Angles(-3.1415927410125732, -8.742277657347586e-08, -3.1415927410125732)
-}
-game:GetService("ReplicatedStorage").PlaceItem:InvokeServer(unpack(args))
-
-local args = {
-    [1] = "Nitrogen Infuser",
-    [2] = CFrame.new(327.29998779296875, 1437.8994140625, 481.29998779296875) * CFrame.Angles(-0, 0, -0)
-}
-game:GetService("ReplicatedStorage").PlaceItem:InvokeServer(unpack(args))
-
-local args = {
-    [1] = "Minitrite Impact",
-    [2] = CFrame.new(300.29998779296875, 1441.8994140625, 475.29998779296875) * CFrame.Angles(-3.1415927410125732, -8.742277657347586e-08, -3.1415927410125732)
-}
-game:GetService("ReplicatedStorage").PlaceItem:InvokeServer(unpack(args))
-
-
-local args = {
-    [1] = "Basic Conveyor",
-    [2] = CFrame.new(327.29998779296875, 1436.8994140625, 476.29998779296875) * CFrame.Angles(-0, -1.5707963705062866, 0)
-}
-game:GetService("ReplicatedStorage").PlaceItem:InvokeServer(unpack(args))
-
-local args = {
-    [1] = "Basic Conveyor",
-    [2] = CFrame.new(323.29998779296875, 1436.8994140625, 476.29998779296875) * CFrame.Angles(-0, -1.5707963705062866, 0)
-}
-game:GetService("ReplicatedStorage").PlaceItem:InvokeServer(unpack(args))
-
-local args = {
-    [1] = "Plasma Accelerator",
-    [2] = CFrame.new(316.29998779296875, 1437.8994140625, 476.29998779296875) * CFrame.Angles(-0, -1.5707963705062866, 0)
+    [1] = "Check"
 }
 
-game:GetService("ReplicatedStorage").PlaceItem:InvokeServer(unpack(args))
+game:GetService("ReplicatedStorage").Layouts:InvokeServer(unpack(args))
+wait(1)
+game:GetService("ReplicatedStorage").DestroyAll:InvokeServer()
+wait()
+local args = {
+    [1] = "Check"
+}
+
+game:GetService("ReplicatedStorage").Layouts:InvokeServer(unpack(args))
+wait()
+local args = {
+    [1] = "Load",
+    [2] = "Layout1",
+    [3] = {
+        [1] = {
+            ["CostPerUnit"] = 50000000,
+            ["Name"] = "Blue Teleporter Receiver",
+            ["Amount"] = 1
+        },
+        [2] = {
+            ["CostPerUnit"] = 250,
+            ["Name"] = "Right Conveyor Converter",
+            ["Amount"] = 2
+        },
+        [3] = {
+            ["CostPerUnit"] = 5000000000,
+            ["Name"] = "Miniature Refiner",
+            ["Amount"] = 5
+        },
+        [4] = {
+            ["CostPerUnit"] = 75000000,
+            ["Name"] = "Emerald Enhancer",
+            ["Amount"] = 1
+        },
+        [5] = {
+            ["CostPerUnit"] = 1000000,
+            ["Name"] = "Green Teleporter Receiver",
+            ["Amount"] = 1
+        },
+        [6] = {
+            ["CostPerUnit"] = 100000000,
+            ["Name"] = "Ore Buffer",
+            ["Amount"] = 1
+        },
+        [7] = {
+            ["CostPerUnit"] = 1000000,
+            ["Name"] = "Side Enhancer",
+            ["Amount"] = 20
+        },
+        [8] = {
+            ["CostPerUnit"] = 500000000000000,
+            ["Name"] = "Hyper Tunnel",
+            ["Amount"] = 4
+        },
+        [9] = {
+            ["CostPerUnit"] = 100,
+            ["Name"] = "Centering Conveyor",
+            ["Amount"] = 2
+        },
+        [10] = {
+            ["CostPerUnit"] = 500000000000,
+            ["Name"] = "Toxin Pillars",
+            ["Amount"] = 1
+        },
+        [11] = {
+            ["CostPerUnit"] = 50000000,
+            ["Name"] = "Blue Teleporter Sender",
+            ["Amount"] = 1
+        },
+        [12] = {
+            ["CostPerUnit"] = 250000,
+            ["Name"] = "Orbital Obliterator",
+            ["Amount"] = 1
+        },
+        [13] = {
+            ["CostPerUnit"] = 125000000000000,
+            ["Name"] = "Slimey Refinery",
+            ["Amount"] = 1
+        },
+        [14] = {
+            ["CostPerUnit"] = 10000000000000,
+            ["Name"] = "Orbital Raised Obliterator",
+            ["Amount"] = 1
+        },
+        [15] = {
+            ["CostPerUnit"] = 425000000000000,
+            ["Name"] = "Scrapyard Enchancer",
+            ["Amount"] = 1
+        },
+        [16] = {
+            ["CostPerUnit"] = 50000,
+            ["Name"] = "Signal Amplifier",
+            ["Amount"] = 2
+        },
+        [17] = {
+            ["CostPerUnit"] = 650000000000,
+            ["Name"] = "Impulsion Refinery",
+            ["Amount"] = 1
+        },
+        [18] = {
+            ["CostPerUnit"] = 2500,
+            ["Name"] = "Charging Device",
+            ["Amount"] = 1
+        },
+        [19] = {
+            ["CostPerUnit"] = 1000000,
+            ["Name"] = "Redirectional Satelite Refiner",
+            ["Amount"] = 2
+        },
+        [20] = {
+            ["CostPerUnit"] = 1000,
+            ["Name"] = "Hyper Supplier",
+            ["Amount"] = 2
+        },
+        [21] = {
+            ["CostPerUnit"] = 1000000,
+            ["Name"] = "Green Teleporter Sender",
+            ["Amount"] = 1
+        },
+        [22] = {
+            ["CostPerUnit"] = 850000,
+            ["Name"] = "Long Ramp",
+            ["Amount"] = 1
+        },
+        [23] = {
+            ["CostPerUnit"] = 1000000000000,
+            ["Name"] = "Raised Crimson Refiner",
+            ["Amount"] = 1
+        },
+        [24] = {
+            ["CostPerUnit"] = 25000000,
+            ["Name"] = "Soaring Satellite",
+            ["Amount"] = 1
+        },
+        [25] = {
+            ["CostPerUnit"] = 250000000,
+            ["Name"] = "Electric Rose Enchancer",
+            ["Amount"] = 1
+        },
+        [26] = {
+            ["CostPerUnit"] = 250,
+            ["Name"] = "Left Conveyor Converter",
+            ["Amount"] = 1
+        },
+        [27] = {
+            ["CostPerUnit"] = 1000000000000000000,
+            ["Name"] = "Cyber Temple",
+            ["Amount"] = 1
+        },
+        [28] = {
+            ["CostPerUnit"] = 75000000000,
+            ["Name"] = "Containment Breach",
+            ["Amount"] = 1
+        },
+        [29] = {
+            ["CostPerUnit"] = 5000000,
+            ["Name"] = "Raised Side Cleanser",
+            ["Amount"] = 8
+        },
+        [30] = {
+            ["CostPerUnit"] = 2500000000,
+            ["Name"] = "Overhang Refiner",
+            ["Amount"] = 1
+        },
+        [31] = {
+            ["CostPerUnit"] = 1250000000,
+            ["Name"] = "Corroding Device",
+            ["Amount"] = 1
+        }
+    }
+}
+
+game:GetService("ReplicatedStorage").Layouts:InvokeServer(unpack(args))
+wait(1)
+local args = {
+    [1] = "Check"
+}
+
+game:GetService("ReplicatedStorage").Layouts:InvokeServer(unpack(args))
+wait(50)
+game:GetService("ReplicatedStorage").Rebirth:InvokeServer()
