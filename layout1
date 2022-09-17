@@ -190,7 +190,7 @@ local Button = Section2:AddButton("Rebirth", function()
 end)
 
 
-local Toggle = Section2:AddToggle("Toggle Auto Rebirth & Auto Load", {flag = "Toggle_Flag", default = false}, function(bool)
+local Toggle = Section2:AddToggle("Toggle Auto Rebirth & Auto Load Slot 3 (RISKY!!!)", {flag = "Toggle_Flag", default = false}, function(bool)
    shouldLoop2 = bool
 end)
 while wait() do
