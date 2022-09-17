@@ -1,191 +1,206 @@
-local args = {
-    [1] = "Load",
-    [2] = "Layout2"
-}
-game:GetService("ReplicatedStorage").Layouts:InvokeServer(unpack(args))
-wait(20)
-local args = {
-    [1] = "Check"
-}
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/UI-Libraries/main/Vynixius/Source.lua"))()
+local Window = Library:AddWindow({
+	title = {"Space", "Personal GUI"},
+	theme = {
+		Accent = Color3.fromRGB(0, 255, 0)
+	},
+	key = Enum.KeyCode.LeftAlt,
+	default = true
+})
+local Tab = Window:AddTab("Tab", {default = false})
+local Section = Tab:AddSection("Player Misc", {default = false})
+local Section1 = Tab:AddSection("Teleports", {default = false})
+local Section2 = Tab:AddSection("Base Misc", {default = false})
+local shouldLoop2 = false
 
-game:GetService("ReplicatedStorage").Layouts:InvokeServer(unpack(args))
-wait(1)
-game:GetService("ReplicatedStorage").DestroyAll:InvokeServer()
-wait()
-local args = {
-    [1] = "Check"
-}
+-- Player Misc
+local Button = Section:AddButton("120 Fov, Anti AFK", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/AForgottenAccount/afk120/main/afk%20120", true))()
+end)
+local Button = Section:AddButton("Claim Daily Reward", function()
+	game:GetService("ReplicatedStorage").DailyReward:FireServer()
+end)
 
-game:GetService("ReplicatedStorage").Layouts:InvokeServer(unpack(args))
-wait()
-local args = {
-    [1] = "Load",
-    [2] = "Layout1",
-    [3] = {
-        [1] = {
-            ["CostPerUnit"] = 50000000,
-            ["Name"] = "Blue Teleporter Receiver",
-            ["Amount"] = 1
-        },
-        [2] = {
-            ["CostPerUnit"] = 250,
-            ["Name"] = "Right Conveyor Converter",
-            ["Amount"] = 2
-        },
-        [3] = {
-            ["CostPerUnit"] = 5000000000,
-            ["Name"] = "Miniature Refiner",
-            ["Amount"] = 5
-        },
-        [4] = {
-            ["CostPerUnit"] = 75000000,
-            ["Name"] = "Emerald Enhancer",
-            ["Amount"] = 1
-        },
-        [5] = {
-            ["CostPerUnit"] = 1000000,
-            ["Name"] = "Green Teleporter Receiver",
-            ["Amount"] = 1
-        },
-        [6] = {
-            ["CostPerUnit"] = 100000000,
-            ["Name"] = "Ore Buffer",
-            ["Amount"] = 1
-        },
-        [7] = {
-            ["CostPerUnit"] = 1000000,
-            ["Name"] = "Side Enhancer",
-            ["Amount"] = 20
-        },
-        [8] = {
-            ["CostPerUnit"] = 500000000000000,
-            ["Name"] = "Hyper Tunnel",
-            ["Amount"] = 4
-        },
-        [9] = {
-            ["CostPerUnit"] = 100,
-            ["Name"] = "Centering Conveyor",
-            ["Amount"] = 2
-        },
-        [10] = {
-            ["CostPerUnit"] = 500000000000,
-            ["Name"] = "Toxin Pillars",
-            ["Amount"] = 1
-        },
-        [11] = {
-            ["CostPerUnit"] = 50000000,
-            ["Name"] = "Blue Teleporter Sender",
-            ["Amount"] = 1
-        },
-        [12] = {
-            ["CostPerUnit"] = 250000,
-            ["Name"] = "Orbital Obliterator",
-            ["Amount"] = 1
-        },
-        [13] = {
-            ["CostPerUnit"] = 125000000000000,
-            ["Name"] = "Slimey Refinery",
-            ["Amount"] = 1
-        },
-        [14] = {
-            ["CostPerUnit"] = 10000000000000,
-            ["Name"] = "Orbital Raised Obliterator",
-            ["Amount"] = 1
-        },
-        [15] = {
-            ["CostPerUnit"] = 425000000000000,
-            ["Name"] = "Scrapyard Enchancer",
-            ["Amount"] = 1
-        },
-        [16] = {
-            ["CostPerUnit"] = 50000,
-            ["Name"] = "Signal Amplifier",
-            ["Amount"] = 2
-        },
-        [17] = {
-            ["CostPerUnit"] = 650000000000,
-            ["Name"] = "Impulsion Refinery",
-            ["Amount"] = 1
-        },
-        [18] = {
-            ["CostPerUnit"] = 2500,
-            ["Name"] = "Charging Device",
-            ["Amount"] = 1
-        },
-        [19] = {
-            ["CostPerUnit"] = 1000000,
-            ["Name"] = "Redirectional Satelite Refiner",
-            ["Amount"] = 2
-        },
-        [20] = {
-            ["CostPerUnit"] = 1000,
-            ["Name"] = "Hyper Supplier",
-            ["Amount"] = 2
-        },
-        [21] = {
-            ["CostPerUnit"] = 1000000,
-            ["Name"] = "Green Teleporter Sender",
-            ["Amount"] = 1
-        },
-        [22] = {
-            ["CostPerUnit"] = 850000,
-            ["Name"] = "Long Ramp",
-            ["Amount"] = 1
-        },
-        [23] = {
-            ["CostPerUnit"] = 1000000000000,
-            ["Name"] = "Raised Crimson Refiner",
-            ["Amount"] = 1
-        },
-        [24] = {
-            ["CostPerUnit"] = 25000000,
-            ["Name"] = "Soaring Satellite",
-            ["Amount"] = 1
-        },
-        [25] = {
-            ["CostPerUnit"] = 250000000,
-            ["Name"] = "Electric Rose Enchancer",
-            ["Amount"] = 1
-        },
-        [26] = {
-            ["CostPerUnit"] = 250,
-            ["Name"] = "Left Conveyor Converter",
-            ["Amount"] = 1
-        },
-        [27] = {
-            ["CostPerUnit"] = 1000000000000000000,
-            ["Name"] = "Cyber Temple",
-            ["Amount"] = 1
-        },
-        [28] = {
-            ["CostPerUnit"] = 75000000000,
-            ["Name"] = "Containment Breach",
-            ["Amount"] = 1
-        },
-        [29] = {
-            ["CostPerUnit"] = 5000000,
-            ["Name"] = "Raised Side Cleanser",
-            ["Amount"] = 8
-        },
-        [30] = {
-            ["CostPerUnit"] = 2500000000,
-            ["Name"] = "Overhang Refiner",
-            ["Amount"] = 1
-        },
-        [31] = {
-            ["CostPerUnit"] = 1250000000,
-            ["Name"] = "Corroding Device",
-            ["Amount"] = 1
+-- Teleports, setclipboard(tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.Position))
+local Button = Section1:AddButton("Teleport to Factory 1", function()
+	local teleport_table = {
+    location1 = CFrame.new(356.4230651855469, 1368.0511474609375, -381.162353515625)
         }
-    }
-}
+    local TweenService = game:GetService('TweenService')
+    local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+    local LocalPlayer = game:GetService('Players').LocalPlayer
+    function bypass_teleport(CFrame)
+        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
+            TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+        end
+    end
+    bypass_teleport(teleport_table.location1)
+end)
+local Button = Section1:AddButton("Teleport to Factory 2", function()
+	local teleport_table = {
+    location1 = CFrame.new(291.29998779296875, 1436.951171875, 514.2999877929688)
+        }
+    local TweenService = game:GetService('TweenService')
+    local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+    local LocalPlayer = game:GetService('Players').LocalPlayer
+    function bypass_teleport(CFrame)
+        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
+            TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+        end
+    end
+    bypass_teleport(teleport_table.location1)
+end)
+local Button = Section1:AddButton("Teleport to Factory 3", function()
+	local teleport_table = {
+    location1 = CFrame.new(559.5, 1446.1512451171875, 268.0999755859375)
+        }
+    local TweenService = game:GetService('TweenService')
+    local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+    local LocalPlayer = game:GetService('Players').LocalPlayer
+    function bypass_teleport(CFrame)
+        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
+            TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+        end
+    end
+    bypass_teleport(teleport_table.location1)
+end)
+local Button = Section1:AddButton("Teleport to Factory 4", function()
+	local teleport_table = {
+    location1 = CFrame.new(-153.40000915527344, 1446.05126953125, -185.400146484375)
+        }
+    local TweenService = game:GetService('TweenService')
+    local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+    local LocalPlayer = game:GetService('Players').LocalPlayer
+    function bypass_teleport(CFrame)
+        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
+            TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+        end
+    end
+    bypass_teleport(teleport_table.location1)
+end)
+local Button = Section1:AddButton("Teleport to Merchant", function()
+	local teleport_table = {
+    location1 = CFrame.new(657.5196533203125, 1387.45166015625, -376.4313659667969) -- You can add other values
+        }
+    local TweenService = game:GetService('TweenService')
+    local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+    local LocalPlayer = game:GetService('Players').LocalPlayer
+    function bypass_teleport(CFrame)
+        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
+            TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+        end
+    end
+    bypass_teleport(teleport_table.location1)
+end)
+local Button = Section1:AddButton("Teleport to Upgrades", function()
+	local teleport_table = {
+    location1 = CFrame.new(608.2239990234375, 1396.0516357421875, -215.22389221191406) -- You can add other values
+        }
+    local TweenService = game:GetService('TweenService')
+    local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+    local LocalPlayer = game:GetService('Players').LocalPlayer
+    function bypass_teleport(CFrame)
+        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
+            TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+        end
+    end
+    bypass_teleport(teleport_table.location1)
+end)
+local Button = Section1:AddButton("Teleport to Box man", function()
+	local teleport_table = {
+    location1 = CFrame.new(42.362892150878906, 1446.7518310546875, 69.21131134033203) -- You can add other values
+        }
+    local TweenService = game:GetService('TweenService')
+    local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+    local LocalPlayer = game:GetService('Players').LocalPlayer
+    function bypass_teleport(CFrame)
+        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
+            TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+        end
+    end
+    bypass_teleport(teleport_table.location1)
+end)
+local Button = Section1:AddButton("Teleport to Craftsmen", function()
+	local teleport_table = {
+    location1 = CFrame.new(14.30765438079834, 1447.5418701171875, 204.08226013183594)
+        }
+    local TweenService = game:GetService('TweenService')
+    local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+    local LocalPlayer = game:GetService('Players').LocalPlayer
+    function bypass_teleport(CFrame)
+        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
+            TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+        end
+    end
+    bypass_teleport(teleport_table.location1)
+end)
+local Button = Section1:AddButton("Teleport to AscensionReroll", function()
+	local teleport_table = {
+    location1 = CFrame.new(162.3454132080078, 1446.7518310546875, 266.727294921875)
+        }
+    local TweenService = game:GetService('TweenService')
+    local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+    local LocalPlayer = game:GetService('Players').LocalPlayer
+    function bypass_teleport(CFrame)
+        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
+            TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+        end
+    end
+    bypass_teleport(teleport_table.location1)
+end)
+local Button = Section1:AddButton("Teleport to Reroll", function()
+	local teleport_table = {
+    location1 = CFrame.new(571.3627319335938, 1487.1561279296875, -193.25363159179688)
+        }
+    local TweenService = game:GetService('TweenService')
+    local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+    local LocalPlayer = game:GetService('Players').LocalPlayer
+    function bypass_teleport(CFrame)
+        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
+            TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+        end
+    end
+    bypass_teleport(teleport_table.location1)
+end)
+local Button = Section1:AddButton("Teleport to Stardust Reroll", function()
+	local teleport_table = {
+    location1 = CFrame.new(607.1526489257812, 1443.8511962890625, 187.45150756835938)
+        }
+    local TweenService = game:GetService('TweenService')
+    local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+    local LocalPlayer = game:GetService('Players').LocalPlayer
+    function bypass_teleport(CFrame)
+        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
+            TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+        end
+    end
+    bypass_teleport(teleport_table.location1)
+end)
 
-game:GetService("ReplicatedStorage").Layouts:InvokeServer(unpack(args))
-wait(1)
-local args = {
-    [1] = "Check"
-}
 
-game:GetService("ReplicatedStorage").Layouts:InvokeServer(unpack(args))
-wait(50)
-game:GetService("ReplicatedStorage").Rebirth:InvokeServer()
+-- Base Misc
+local Button = Section2:AddButton("Enable/Disable Mines", function()
+	game:GetService("ReplicatedStorage").ToggleMines:InvokeServer()
+end)
+local Button = Section2:AddButton("Clear Base", function()
+	game:GetService("ReplicatedStorage").DestroyAll:InvokeServer()
+end)
+local Button = Section2:AddButton("Rebirth", function()
+	game:GetService("ReplicatedStorage").Rebirth:InvokeServer()
+end)
+
+
+local Toggle = Section2:AddToggle("Toggle Auto Rebirth & Auto Load", {flag = "Toggle_Flag", default = false}, function(bool)
+   shouldLoop2 = bool
+end)
+while wait() do
+    if shouldLoop2 then
+        local args = {
+            [1] = "Load",
+            [2] = "Layout3"
+        }
+        game:GetService("ReplicatedStorage").Layouts:InvokeServer(unpack(args))
+        wait(1)
+        game:GetService("ReplicatedStorage").Rebirth:InvokeServer()
+    end
+end
