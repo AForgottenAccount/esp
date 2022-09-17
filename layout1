@@ -1,206 +1,208 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/UI-Libraries/main/Vynixius/Source.lua"))()
-local Window = Library:AddWindow({
-	title = {"Space", "Personal GUI"},
-	theme = {
-		Accent = Color3.fromRGB(0, 255, 0)
-	},
-	key = Enum.KeyCode.LeftAlt,
-	default = true
-})
-local Tab = Window:AddTab("Tab", {default = false})
-local Section = Tab:AddSection("Player Misc", {default = false})
-local Section1 = Tab:AddSection("Teleports", {default = false})
-local Section2 = Tab:AddSection("Base Misc", {default = false})
-local shouldLoop2 = false
-
--- Player Misc
-local Button = Section:AddButton("120 Fov, Anti AFK", function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/AForgottenAccount/afk120/main/afk%20120", true))()
-end)
-local Button = Section:AddButton("Claim Daily Reward", function()
-	game:GetService("ReplicatedStorage").DailyReward:FireServer()
-end)
-
--- Teleports, setclipboard(tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.Position))
-local Button = Section1:AddButton("Teleport to Factory 1", function()
-	local teleport_table = {
-    location1 = CFrame.new(356.4230651855469, 1368.0511474609375, -381.162353515625)
-        }
-    local TweenService = game:GetService('TweenService')
-    local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
-    local LocalPlayer = game:GetService('Players').LocalPlayer
-    function bypass_teleport(CFrame)
-        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
-            TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+if game.PlaceId == 9604012331 then 
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/UI-Libraries/main/Vynixius/Source.lua"))()
+    local Window = Library:AddWindow({
+    	title = {"Space", "Personal GUI"},
+    	theme = {
+    		Accent = Color3.fromRGB(0, 255, 0)
+    	},
+    	key = Enum.KeyCode.LeftAlt,
+    	default = true
+    })
+    local Tab = Window:AddTab("Tab", {default = false})
+    local Section = Tab:AddSection("Player Misc", {default = false})
+    local Section1 = Tab:AddSection("Teleports", {default = false})
+    local Section2 = Tab:AddSection("Base Misc", {default = false})
+    local shouldLoop2 = false
+    
+    -- Player Misc
+    local Button = Section:AddButton("120 Fov, Anti AFK", function()
+    	loadstring(game:HttpGet("https://raw.githubusercontent.com/AForgottenAccount/afk120/main/afk%20120", true))()
+    end)
+    local Button = Section:AddButton("Claim Daily Reward", function()
+    	game:GetService("ReplicatedStorage").DailyReward:FireServer()
+    end)
+    
+    -- Teleports, setclipboard(tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.Position))
+    local Button = Section1:AddButton("Teleport to Factory 1", function()
+    	local teleport_table = {
+        location1 = CFrame.new(356.4230651855469, 1368.0511474609375, -381.162353515625)
+            }
+        local TweenService = game:GetService('TweenService')
+        local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+        local LocalPlayer = game:GetService('Players').LocalPlayer
+        function bypass_teleport(CFrame)
+            if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
+                TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+            end
         end
-    end
-    bypass_teleport(teleport_table.location1)
-end)
-local Button = Section1:AddButton("Teleport to Factory 2", function()
-	local teleport_table = {
-    location1 = CFrame.new(291.29998779296875, 1436.951171875, 514.2999877929688)
-        }
-    local TweenService = game:GetService('TweenService')
-    local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
-    local LocalPlayer = game:GetService('Players').LocalPlayer
-    function bypass_teleport(CFrame)
-        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
-            TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+        bypass_teleport(teleport_table.location1)
+    end)
+    local Button = Section1:AddButton("Teleport to Factory 2", function()
+    	local teleport_table = {
+        location1 = CFrame.new(291.29998779296875, 1436.951171875, 514.2999877929688)
+            }
+        local TweenService = game:GetService('TweenService')
+        local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+        local LocalPlayer = game:GetService('Players').LocalPlayer
+        function bypass_teleport(CFrame)
+            if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
+                TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+            end
         end
-    end
-    bypass_teleport(teleport_table.location1)
-end)
-local Button = Section1:AddButton("Teleport to Factory 3", function()
-	local teleport_table = {
-    location1 = CFrame.new(559.5, 1446.1512451171875, 268.0999755859375)
-        }
-    local TweenService = game:GetService('TweenService')
-    local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
-    local LocalPlayer = game:GetService('Players').LocalPlayer
-    function bypass_teleport(CFrame)
-        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
-            TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+        bypass_teleport(teleport_table.location1)
+    end)
+    local Button = Section1:AddButton("Teleport to Factory 3", function()
+    	local teleport_table = {
+        location1 = CFrame.new(559.5, 1446.1512451171875, 268.0999755859375)
+            }
+        local TweenService = game:GetService('TweenService')
+        local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+        local LocalPlayer = game:GetService('Players').LocalPlayer
+        function bypass_teleport(CFrame)
+            if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
+                TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+            end
         end
-    end
-    bypass_teleport(teleport_table.location1)
-end)
-local Button = Section1:AddButton("Teleport to Factory 4", function()
-	local teleport_table = {
-    location1 = CFrame.new(-153.40000915527344, 1446.05126953125, -185.400146484375)
-        }
-    local TweenService = game:GetService('TweenService')
-    local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
-    local LocalPlayer = game:GetService('Players').LocalPlayer
-    function bypass_teleport(CFrame)
-        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
-            TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+        bypass_teleport(teleport_table.location1)
+    end)
+    local Button = Section1:AddButton("Teleport to Factory 4", function()
+    	local teleport_table = {
+        location1 = CFrame.new(-153.40000915527344, 1446.05126953125, -185.400146484375)
+            }
+        local TweenService = game:GetService('TweenService')
+        local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+        local LocalPlayer = game:GetService('Players').LocalPlayer
+        function bypass_teleport(CFrame)
+            if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
+                TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+            end
         end
-    end
-    bypass_teleport(teleport_table.location1)
-end)
-local Button = Section1:AddButton("Teleport to Merchant", function()
-	local teleport_table = {
-    location1 = CFrame.new(657.5196533203125, 1387.45166015625, -376.4313659667969) -- You can add other values
-        }
-    local TweenService = game:GetService('TweenService')
-    local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
-    local LocalPlayer = game:GetService('Players').LocalPlayer
-    function bypass_teleport(CFrame)
-        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
-            TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+        bypass_teleport(teleport_table.location1)
+    end)
+    local Button = Section1:AddButton("Teleport to Merchant", function()
+    	local teleport_table = {
+        location1 = CFrame.new(657.5196533203125, 1387.45166015625, -376.4313659667969) -- You can add other values
+            }
+        local TweenService = game:GetService('TweenService')
+        local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+        local LocalPlayer = game:GetService('Players').LocalPlayer
+        function bypass_teleport(CFrame)
+            if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
+                TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+            end
         end
-    end
-    bypass_teleport(teleport_table.location1)
-end)
-local Button = Section1:AddButton("Teleport to Upgrades", function()
-	local teleport_table = {
-    location1 = CFrame.new(608.2239990234375, 1396.0516357421875, -215.22389221191406) -- You can add other values
-        }
-    local TweenService = game:GetService('TweenService')
-    local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
-    local LocalPlayer = game:GetService('Players').LocalPlayer
-    function bypass_teleport(CFrame)
-        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
-            TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+        bypass_teleport(teleport_table.location1)
+    end)
+    local Button = Section1:AddButton("Teleport to Upgrades", function()
+    	local teleport_table = {
+        location1 = CFrame.new(608.2239990234375, 1396.0516357421875, -215.22389221191406) -- You can add other values
+            }
+        local TweenService = game:GetService('TweenService')
+        local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+        local LocalPlayer = game:GetService('Players').LocalPlayer
+        function bypass_teleport(CFrame)
+            if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
+                TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+            end
         end
-    end
-    bypass_teleport(teleport_table.location1)
-end)
-local Button = Section1:AddButton("Teleport to Box man", function()
-	local teleport_table = {
-    location1 = CFrame.new(42.362892150878906, 1446.7518310546875, 69.21131134033203) -- You can add other values
-        }
-    local TweenService = game:GetService('TweenService')
-    local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
-    local LocalPlayer = game:GetService('Players').LocalPlayer
-    function bypass_teleport(CFrame)
-        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
-            TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+        bypass_teleport(teleport_table.location1)
+    end)
+    local Button = Section1:AddButton("Teleport to Box man", function()
+    	local teleport_table = {
+        location1 = CFrame.new(42.362892150878906, 1446.7518310546875, 69.21131134033203) -- You can add other values
+            }
+        local TweenService = game:GetService('TweenService')
+        local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+        local LocalPlayer = game:GetService('Players').LocalPlayer
+        function bypass_teleport(CFrame)
+            if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
+                TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+            end
         end
-    end
-    bypass_teleport(teleport_table.location1)
-end)
-local Button = Section1:AddButton("Teleport to Craftsmen", function()
-	local teleport_table = {
-    location1 = CFrame.new(14.30765438079834, 1447.5418701171875, 204.08226013183594)
-        }
-    local TweenService = game:GetService('TweenService')
-    local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
-    local LocalPlayer = game:GetService('Players').LocalPlayer
-    function bypass_teleport(CFrame)
-        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
-            TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+        bypass_teleport(teleport_table.location1)
+    end)
+    local Button = Section1:AddButton("Teleport to Craftsmen", function()
+    	local teleport_table = {
+        location1 = CFrame.new(14.30765438079834, 1447.5418701171875, 204.08226013183594)
+            }
+        local TweenService = game:GetService('TweenService')
+        local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+        local LocalPlayer = game:GetService('Players').LocalPlayer
+        function bypass_teleport(CFrame)
+            if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
+                TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+            end
         end
-    end
-    bypass_teleport(teleport_table.location1)
-end)
-local Button = Section1:AddButton("Teleport to AscensionReroll", function()
-	local teleport_table = {
-    location1 = CFrame.new(162.3454132080078, 1446.7518310546875, 266.727294921875)
-        }
-    local TweenService = game:GetService('TweenService')
-    local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
-    local LocalPlayer = game:GetService('Players').LocalPlayer
-    function bypass_teleport(CFrame)
-        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
-            TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+        bypass_teleport(teleport_table.location1)
+    end)
+    local Button = Section1:AddButton("Teleport to AscensionReroll", function()
+    	local teleport_table = {
+        location1 = CFrame.new(162.3454132080078, 1446.7518310546875, 266.727294921875)
+            }
+        local TweenService = game:GetService('TweenService')
+        local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+        local LocalPlayer = game:GetService('Players').LocalPlayer
+        function bypass_teleport(CFrame)
+            if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
+                TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+            end
         end
-    end
-    bypass_teleport(teleport_table.location1)
-end)
-local Button = Section1:AddButton("Teleport to Reroll", function()
-	local teleport_table = {
-    location1 = CFrame.new(571.3627319335938, 1487.1561279296875, -193.25363159179688)
-        }
-    local TweenService = game:GetService('TweenService')
-    local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
-    local LocalPlayer = game:GetService('Players').LocalPlayer
-    function bypass_teleport(CFrame)
-        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
-            TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+        bypass_teleport(teleport_table.location1)
+    end)
+    local Button = Section1:AddButton("Teleport to Reroll", function()
+    	local teleport_table = {
+        location1 = CFrame.new(571.3627319335938, 1487.1561279296875, -193.25363159179688)
+            }
+        local TweenService = game:GetService('TweenService')
+        local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+        local LocalPlayer = game:GetService('Players').LocalPlayer
+        function bypass_teleport(CFrame)
+            if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
+                TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+            end
         end
-    end
-    bypass_teleport(teleport_table.location1)
-end)
-local Button = Section1:AddButton("Teleport to Stardust Reroll", function()
-	local teleport_table = {
-    location1 = CFrame.new(607.1526489257812, 1443.8511962890625, 187.45150756835938)
-        }
-    local TweenService = game:GetService('TweenService')
-    local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
-    local LocalPlayer = game:GetService('Players').LocalPlayer
-    function bypass_teleport(CFrame)
-        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
-            TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+        bypass_teleport(teleport_table.location1)
+    end)
+    local Button = Section1:AddButton("Teleport to Stardust Reroll", function()
+    	local teleport_table = {
+        location1 = CFrame.new(607.1526489257812, 1443.8511962890625, 187.45150756835938)
+            }
+        local TweenService = game:GetService('TweenService')
+        local TweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+        local LocalPlayer = game:GetService('Players').LocalPlayer
+        function bypass_teleport(CFrame)
+            if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
+                TweenService:Create(LocalPlayer.Character.HumanoidRootPart, TweenInfo, {CFrame = CFrame}):Play()
+            end
         end
-    end
-    bypass_teleport(teleport_table.location1)
-end)
-
-
--- Base Misc
-local Button = Section2:AddButton("Enable/Disable Mines", function()
-	game:GetService("ReplicatedStorage").ToggleMines:InvokeServer()
-end)
-local Button = Section2:AddButton("Clear Base", function()
-	game:GetService("ReplicatedStorage").DestroyAll:InvokeServer()
-end)
-local Button = Section2:AddButton("Rebirth", function()
-	game:GetService("ReplicatedStorage").Rebirth:InvokeServer()
-end)
-
-
-local Toggle = Section2:AddToggle("Toggle Auto Rebirth & Auto Load Slot 3 (RISKY!!!)", {flag = "Toggle_Flag", default = false}, function(bool)
-   shouldLoop2 = bool
-end)
-while wait() do
-    if shouldLoop2 then
-        local args = {
-            [1] = "Load",
-            [2] = "Layout3"
-        }
-        game:GetService("ReplicatedStorage").Layouts:InvokeServer(unpack(args))
-        wait(1)
-        game:GetService("ReplicatedStorage").Rebirth:InvokeServer()
+        bypass_teleport(teleport_table.location1)
+    end)
+    
+    
+    -- Base Misc
+    local Button = Section2:AddButton("Enable/Disable Mines", function()
+    	game:GetService("ReplicatedStorage").ToggleMines:InvokeServer()
+    end)
+    local Button = Section2:AddButton("Clear Base", function()
+    	game:GetService("ReplicatedStorage").DestroyAll:InvokeServer()
+    end)
+    local Button = Section2:AddButton("Rebirth", function()
+    	game:GetService("ReplicatedStorage").Rebirth:InvokeServer()
+    end)
+    
+    
+    local Toggle = Section2:AddToggle("Toggle Auto Rebirth & Auto Load Slot 3 (RISKY!!!)", {flag = "Toggle_Flag", default = false}, function(bool)
+       shouldLoop2 = bool
+    end)
+    while wait() do
+        if shouldLoop2 then
+            local args = {
+                [1] = "Load",
+                [2] = "Layout3"
+            }
+            game:GetService("ReplicatedStorage").Layouts:InvokeServer(unpack(args))
+            wait(1)
+            game:GetService("ReplicatedStorage").Rebirth:InvokeServer()
+        end
     end
 end
