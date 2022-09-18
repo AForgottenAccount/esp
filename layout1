@@ -1,6 +1,8 @@
 local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3')))()
 local w = library:CreateWindow("Mini Miner's") -- Creates the window
-local b = w:CreateFolder("Space's Cheats") -- Creates the folder(U will put here your buttons,etc)
+local b = w:CreateFolder("Main")
+local c = w:CreateFolder("Base Misc")
+local d = w:CreateFolder("Changelog")-- Creates the folder(U will put here your buttons,etc)
 local loop = false
 
 b:Button("120 FOV, Anti AFK",function()
@@ -9,22 +11,89 @@ end)
 b:Button("Claim Daily Reward",function()
     game:GetService("ReplicatedStorage").DailyReward:FireServer()
 end)
-b:Button("Rebirth",function()
+c:Button("Rebirth",function()
     game:GetService("ReplicatedStorage").Rebirth:InvokeServer()
 end)
-b:Button("Prestige",function()
+c:Button("Prestige",function()
     local Event = game:GetService("ReplicatedStorage").Prestige
     Event:InvokeServer()
 end)
-b:Button("Ascend",function()
+c:Button("Ascend",function()
     local Event = game:GetService("ReplicatedStorage").Ascend
     Event:InvokeServer()
 end)
-b:Button("Clear Base",function()
+c:Button("Clear Base",function()
     game:GetService("ReplicatedStorage").DestroyAll:InvokeServer()
 end)
+b:Button("Destroy Seats",function()
+    for i,v in next, workspace:GetDescendants() do
+    if v:IsA'Seat' then
+        v:Destroy()
+    end
+end
+end)
+d:Label("09/18/2022",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,0); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+})
+d:Label("-Added-",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(0,255,0); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+})
+d:Label(">Changelog",{
+    TextSize = 20; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+})
+d:Label(">Folders",{
+    TextSize = 20; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+})
+d:Label(">Destroy Seats",{
+    TextSize = 20; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+})
+d:Label("-Removed-",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,0,0); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+})
+d:Label(">Auto Open Box's",{
+    TextSize = 20; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+})
+d:Label(">Destroy UI",{
+    TextSize = 20; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+})
+d:Label("-Changed-",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(0,112,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+})
+d:Label(">AR & L From 1s to 3s",{
+    TextSize = 20; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+})
+d:Label("-WIP-",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,0,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+})
+d:Label(">Box Changing AR & L Wait Time",{
+    TextSize = 15; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+})
 
-b:Toggle("Auto Rebirth & Load Layout 3",function(bool)
+c:Toggle("Auto Rebirth & Load Layout 3",function(bool)
     loop = bool
 end)
 
@@ -178,9 +247,9 @@ b:Dropdown("Teleport to ? (Bases)",{"Base 1","Base 2","Base 3","Base 4"},true,fu
         bypass_teleport(teleport_table.location1)
     end
 end)
-b:Box("Wait Time Between Rebirths","number",function(value) -- "number" or "string"
-    print(value)
-end)
+--b:Box("Wait Time Between Rebirths","number",function(value) -- "number" or "string"
+    --print(value)
+--end)
 spawn(function() -- Wrap in spawn function so it doesn't yield any code below OR put it at the bottom.
     -- Better to wrap in a spawn function though
     while wait() do
@@ -190,12 +259,11 @@ spawn(function() -- Wrap in spawn function so it doesn't yield any code below OR
 				[2] = "Layout3"
 			}
 			game:GetService("ReplicatedStorage").Layouts:InvokeServer(unpack(args))
-			wait(1)
+			wait(3)
 			game:GetService("ReplicatedStorage").Rebirth:InvokeServer()
         end
     end
 end)
-b:DestroyGui()
 
 --[[
 How to refresh a dropdown:
